@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p>Độ Fahrenheit : <samp id="doF"></samp></p>
+<p>Đô Kenvin : <samp id="doC"></samp></p>
+<body>
+<script>
+    function Temperature(C) {
+        this.C = C;
+        this.giaTriC=function (C) {
+            this.C = C
+        };
+        this.Fahrenheit =function () {
+            let F = (this.C*1.8)+32;
+            return F;
+        };
+        this.Kenvin = function () {
+            let K = this.C + 273;
+            return K;
+        };
+    }
+    let h = new Temperature();
+    h.giaTriC(25);
+    document.getElementById("doF").innerHTML = h.Fahrenheit();
+    document.getElementById("doC").innerHTML = h.Kenvin();
+</script>
+</body>
+</html>
